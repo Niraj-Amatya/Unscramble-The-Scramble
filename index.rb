@@ -100,4 +100,4 @@ while start_game < max_game && play_game == "yes"
     start_game += 1
 end
 
-puts "#{$player2} your total score is  #{$score}"
+puts "#{$player2} your total score is  #{score}"
