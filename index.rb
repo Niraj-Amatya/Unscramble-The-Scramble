@@ -7,9 +7,7 @@ app_name = Artii::Base.new
 puts app_name.asciify("Unscramble Words").colorize(:blue)
 # puts welcome_app_name("Kanji  Ninja  App!").red #fix this.
 
-max_game = 5
-start_game = 0
-score = 0
+
 play_game = "yes"
 
 $player1 = ""
@@ -43,6 +41,10 @@ players_name
     end
 
 
+max_game = 5
+start_game = 0
+score = 0
+
 while start_game < max_game && play_game == "yes"
     array_words = []
     
@@ -55,19 +57,30 @@ while start_game < max_game && play_game == "yes"
     puts "Here is your word to guess #{$player2}"
     puts
 
-    #generate new meaningless word
-     generate_new_meaningless_word = generate_random_word.chars.shuffle.join("               ")
-     app_name = Artii::Base.new 
-     puts app_name.asciify(generate_new_meaningless_word).colorize(:green)
+        #generate new meaningless word
+        generate_new_meaningless_word = generate_random_word.chars.shuffle.join("               ")
+        app_name = Artii::Base.new 
+        puts app_name.asciify(generate_new_meaningless_word).colorize(:green)
 
         
-     
+        # 
         user_guess = " "
         guess_count = 0
         guess_limit = 3
         out_of_guesses = false
 
-       
+        if guess_limit > guess_count
+        
+            puts
+            puts "you have #{guess_limit} chance to guess the right word #{$player2}."
+            puts "Please guess the right word #{$player2}:"
+            user_guess = gets.chomp.upcase
+            guess_limit -= 1
+    
+    
+        else
+                out_of_guesses = true
+        end
 
 
    
