@@ -48,22 +48,26 @@ score = 0
 while start_game < max_game && play_game == "yes"
     array_words = []
     
+    
     puts "Input the word #{$player1}"
     user_input = STDIN.noecho(&:gets).chomp.upcase
-    array_words << user_input
-    
-    generate_random_word = array_words.sample
 
-    puts "Here is your word to guess #{$player2}"
-    puts
+
+# checking if user input is string or not
+    if /^[a-zA-Z]+$/.match(user_input)
+        array_words << user_input
+    
+        generate_random_word = array_words.sample
+
+        puts "Here is your word to guess #{$player2}"
+        puts
 
         #generate new meaningless word
         generate_new_meaningless_word = generate_random_word.chars.shuffle.join("               ")
         app_name = Artii::Base.new 
         puts app_name.asciify(generate_new_meaningless_word).colorize(:green)
-
-        
-        # 
+       
+         
         user_guess = " "
         guess_count = 0
         guess_limit = 3
@@ -95,6 +99,14 @@ while start_game < max_game && play_game == "yes"
                 score += 1
             
             end
+
+    else
+        puts "It only takes string"
+        puts "Plese try again"
+        # user_input = STDIN.noecho(&:gets).chomp.upcase
+    end
+    
+    
     
    
     start_game += 1
