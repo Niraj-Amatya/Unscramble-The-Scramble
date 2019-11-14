@@ -1,5 +1,8 @@
 
-
+require 'io/console'
+max_game = 5
+start_game = 0
+score = 0
 play_game = "yes"
 
 $player1 = ""
@@ -31,4 +34,23 @@ if play_game == "yes"
 else 
     puts "Better Luck next time #{$player1}"
         
+end
+
+
+while start_game < max_game && play_game == "yes"
+    array_words = []
+    
+    puts "Input the word #{$player1}"
+    user_input = STDIN.noecho(&:gets).chomp.upcase
+    array_words << user_input
+    
+    generate_random_word = array_words.sample
+
+
+
+
+
+
+
+
 end
