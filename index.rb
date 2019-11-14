@@ -15,9 +15,7 @@ play_game = "yes"
 $player1 = ""
 $player2 = ""
 
-
-
-
+#method to get the players name
 def players_name()
 
     puts "Please input your name PlAYER1?".colorize(:red)
@@ -28,20 +26,21 @@ def players_name()
     
 end
 
+#calling method
 players_name
 
 
-puts "Are you ready to play the guessing game #{$player1} and #{$player2}?"
-play_game = gets.chomp
+    puts "Are you ready to play the guessing game #{$player1} and #{$player2}?"
+    play_game = gets.chomp
 
-if play_game == "yes"
+    if play_game == "yes"
     
-    puts "Welcome to the guessing game #{$player1} and #{$player2}."
+        puts "Welcome to the guessing game #{$player1} and #{$player2}."
     
-else 
-    puts "Better Luck next time #{$player1}"
+    else 
+        puts "Better Luck next time #{$player1}"
         
-end
+    end
 
 
 while start_game < max_game && play_game == "yes"
@@ -56,11 +55,21 @@ while start_game < max_game && play_game == "yes"
     puts "Here is your word to guess #{$player2}"
     puts
 
-    
+    #generate new meaningless word
      generate_new_meaningless_word = generate_random_word.chars.shuffle.join("               ")
      app_name = Artii::Base.new 
      puts app_name.asciify(generate_new_meaningless_word).colorize(:green)
 
+        
+     
+        user_guess = " "
+        guess_count = 0
+        guess_limit = 3
+        out_of_guesses = false
 
+       
+
+
+   
     start_game += 1
 end
