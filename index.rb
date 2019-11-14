@@ -1,5 +1,12 @@
 
 require 'io/console'
+require "colorize"
+require "artii"
+
+app_name = Artii::Base.new 
+puts app_name.asciify("Unscramble Words").colorize(:blue)
+# puts welcome_app_name("Kanji  Ninja  App!").red #fix this.
+
 max_game = 5
 start_game = 0
 score = 0
@@ -13,7 +20,7 @@ $player2 = ""
 
 def players_name()
 
-    puts "Please input your name PlAYER1?"
+    puts "Please input your name PlAYER1?".colorize(:red)
     $player1 = gets.chomp
     puts
     puts "Please input your name PlAYER2?"
@@ -48,7 +55,12 @@ while start_game < max_game && play_game == "yes"
 
     puts "Here is your word to guess #{$player2}"
     puts
-    p generate_new_meaningless_word = generate_random_word.chars.shuffle.join("        ")
+
+    
+     generate_new_meaningless_word = generate_random_word.chars.shuffle.join("               ")
+     app_name = Artii::Base.new 
+     puts app_name.asciify(generate_new_meaningless_word).colorize(:green)
 
 
+    start_game += 1
 end
