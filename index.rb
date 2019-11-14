@@ -46,11 +46,9 @@ while start_game < max_game && play_game == "yes"
     
     generate_random_word = array_words.sample
 
-
-
-
-
-
+    puts "Here is your word to guess #{$player2}"
+    puts
+    p generate_new_meaningless_word = generate_random_word.chars.shuffle.join("        ")
 
 
 end
