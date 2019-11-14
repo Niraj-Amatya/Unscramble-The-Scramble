@@ -92,7 +92,7 @@ while start_game < max_game && play_game == "yes"
 
             else
                 puts "Right guess #{$player2}"
-        
+                score += 1
             
             end
     
