@@ -90,9 +90,10 @@ while start_game < max_game && play_game == "yes"
                 puts "Wrong guess #{$player2}"
                 puts "The right word is: #{generate_random_word}"
 
-
-
-                
+            else
+                puts "Right guess #{$player2}"
+        
+            
             end
     
    
