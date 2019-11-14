@@ -82,8 +82,19 @@ while start_game < max_game && play_game == "yes"
             else
                 out_of_guesses = true
             end
-            
+
         end
+
+
+            if out_of_guesses
+                puts "Wrong guess #{$player2}"
+                puts "The right word is: #{generate_random_word}"
+
+
+
+                
+            end
+    
    
     start_game += 1
 end
