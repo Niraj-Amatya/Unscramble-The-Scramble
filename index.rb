@@ -69,7 +69,8 @@ while start_game < max_game && play_game == "yes"
         guess_limit = 3
         out_of_guesses = false
 
-        if guess_limit > guess_count
+        while user_guess != generate_random_word && !out_of_guesses
+            if guess_limit > guess_count
         
             puts
             puts "you have #{guess_limit} chance to guess the right word #{$player2}."
@@ -78,11 +79,11 @@ while start_game < max_game && play_game == "yes"
             guess_limit -= 1
     
     
-        else
+            else
                 out_of_guesses = true
+            end
+            
         end
-
-
    
     start_game += 1
 end
