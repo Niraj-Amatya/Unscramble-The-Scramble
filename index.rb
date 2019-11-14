@@ -1,6 +1,6 @@
 
 
-
+play_game = "yes"
 
 $player1 = ""
 $player2 = ""
@@ -19,3 +19,16 @@ def players_name()
 end
 
 players_name
+
+
+puts "Are you ready to play the guessing game #{$player1} and #{$player2}?"
+play_game = gets.chomp
+
+if play_game == "yes"
+    
+    puts "Welcome to the guessing game #{$player1} and #{$player2}."
+    
+else 
+    puts "Better Luck next time #{$player1}"
+        
+end
