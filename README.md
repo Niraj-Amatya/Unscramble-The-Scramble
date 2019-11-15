@@ -24,14 +24,34 @@ This game is very simple to use, as small kids are our main target. There are tw
 
 ## **Features**
 
-#### ***Develop a list of features that will be included in the application. It must include:***
+### ***Develop a list of features that will be included in the application. It must include:***
    - THREE features 
    - Describe each features.
+
+
+   ##### Masking with the user input: 
+   One of the player in my app has to input the word for another player to guess and match. When the user types the word in the terminal it should not be visible by another player. For this purpose, the app needs to be able to hide the word. I have used STDIN.noecho method with IO/console module to mask the word. So, every time the user will input the word it’s not visible by another player.
+
+   #### Scramble the word
+
+
+
 
    #### ***Ensure that your features include the following language elements and concepts:***
    - use of variables and the concept of variable scope
    - loops and conditional control structures
    - error handling
+
+
+
+
+
+
+
+   ## **Implementation Plan** ##
+
+   ##### 10 Nov 2019 _(Saturday 8:13pm)_ ##### 
+The following [Trello Board](./images/20191111.png) demonstrated the app project planning status and tasks breakdown at the end of 10 Nov.
 
 
     
