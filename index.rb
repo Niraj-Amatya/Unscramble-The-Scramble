@@ -3,7 +3,8 @@ require 'io/console'
 require "colorize"
 require "artii"
 cmd_args = ARGV
-# puts cmd_args
+
+
 app_name = Artii::Base.new 
 puts app_name.asciify("Unscramble The Scramble").colorize(:blue)
 
