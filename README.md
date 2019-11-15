@@ -50,8 +50,14 @@ This game is very simple to use, as small kids are our main target. There are tw
 
    ## **Implementation Plan** ##
 
-   ##### 10 Nov 2019 _(Saturday 8:13pm)_ ##### 
-The following [Trello Board](./images/20191111.png) demonstrated the app project planning status and tasks breakdown at the end of 10 Nov.
+   ##### 11 Nov 2019 _(Sunday 8:13pm)_ ##### 
+The following [Trello Board](./images/20191111.png) demonstrated the app project planning status and tasks breakdown at the end of 11 Nov.
+<img src="./images/20191111.png" alt="Trello Progress picture-2" />
+
+
+ ##### 13 Nov 2019 _(Wednesday 8:13pm)_ ##### 
+The following [Trello Board](./images/20191113.png) demonstrated the app project planning status and tasks breakdown at the end of 13 Nov.
+<img src="./images/20191113.png" alt="Trello Progress picture-2" />
 
 
     
