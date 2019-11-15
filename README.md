@@ -29,11 +29,22 @@ This game is very simple to use, as small kids are our main target. There are tw
    - Describe each features.
 
 
-   ##### Masking with the user input: 
-   One of the player in my app has to input the word for another player to guess and match. When the user types the word in the terminal it should not be visible by another player. For this purpose, the app needs to be able to hide the word. I have used STDIN.noecho method with IO/console module to mask the word. So, every time the user will input the word it’s not visible by another player.
+   ##### Masking with the user input: #####
+   One of the player in my app has to input the word for another player to guess and match. When the user types the word in the terminal it should not be visible by another player. For this purpose, the app needs to be able to hide the word. I have used STDIN.noecho method with IO/console module to mask the word. So, every time the user will input the word it’s not visible by another player. Below is the cose snippets for this method.
 
-   #### Scramble the word
+ ```
+user_input = STDIN.noecho(&:gets).chomp.upcase
+ 
 
+
+
+   ##### Scrambling the word #####
+
+    Another feature I have implemented in my app is to scramble the word into meaningless word. So basically, the word input by the user has to be broken down into characters. The characters then need to be shuffled and then join into the new word. The new word that will be printed will have no meaning. This is where another player will try to guess the right word from this scrambled word.
+
+```
+generate_new_meaningless_word = generate_random_word.chars.shuffle.join("               ")
+```
 
 
 
