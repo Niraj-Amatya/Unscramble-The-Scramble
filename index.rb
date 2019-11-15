@@ -2,30 +2,31 @@
 require 'io/console'
 require "colorize"
 require "artii"
-
+cmd_args = ARGV
+# puts cmd_args
 app_name = Artii::Base.new 
-puts app_name.asciify("Unscramble Words").colorize(:blue)
-# puts welcome_app_name("Kanji  Ninja  App!").red #fix this.
+puts app_name.asciify("Unscramble The Scramble").colorize(:blue)
+
 
 
 play_game = "yes"
 
-$player1 = ""
-$player2 = ""
-
+$player1 = cmd_args[0]
+$player2 = cmd_args[1]
+ARGV.clear
 #method to get the players name
-def players_name()
+# def players_name()
 
-    puts "Please input your name PlAYER1?".colorize(:red)
-    $player1 = gets.chomp
-    puts
-    puts "Please input your name PlAYER2?"
-    $player2 = gets.chomp
+#     puts "Please input your name PlAYER1?".colorize(:red)
+#     # $player1 = gets.chomp
+#     puts
+#     puts "Please input your name PlAYER2?"
+#     # $player2 = gets.chomp
     
-end
+# end
 
-#calling method
-players_name
+# #calling method
+# players_name
 
 
     puts "Are you ready to play the guessing game #{$player1} and #{$player2}?"
