@@ -6,7 +6,7 @@ cmd_args = ARGV
 
 
 app_name = Artii::Base.new 
-puts app_name.asciify("Unscramble The Scramble").colorize(:blue)
+puts app_name.asciify("Unscramble The Scramble").colorize(:blue).bold
 
 
 
@@ -16,12 +16,19 @@ $player1 = cmd_args[0]
 $player2 = cmd_args[1]
 ARGV.clear
 
+
+
     puts "Are you ready to play the guessing game #{$player1} and #{$player2}?"
     $play_game = gets.chomp
 
+    until $play_game == "yes" or $play_game == "no"
+        puts "Please input either 'yes' or 'no'"
+        $play_game = gets.chomp
+
+    end
 
     
-    def want_to_play_game()
+    def want_to_play_game(person1, person2)
 
         if $play_game == "yes"
     
@@ -32,7 +39,7 @@ ARGV.clear
         
         end
     end
-    want_to_play_game() #calling the method
+    want_to_play_game($player1,$player2) #calling the method
 
 max_game = 5
 start_game = 0
@@ -99,11 +106,12 @@ while start_game < max_game && $play_game == "yes"
         # user_input = STDIN.noecho(&:gets).chomp.upcase
     end
     
-    
-    
-   
+     
     start_game += 1
+
+    
 end
+
 
 puts "#{$player2} your total score is  #{score}"
 
