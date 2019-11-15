@@ -9,44 +9,35 @@ puts app_name.asciify("Unscramble The Scramble").colorize(:blue)
 
 
 
-play_game = "yes"
+$play_game = "yes"
 
 $player1 = cmd_args[0]
 $player2 = cmd_args[1]
 ARGV.clear
-#method to get the players name
-# def players_name()
-
-#     puts "Please input your name PlAYER1?".colorize(:red)
-#     # $player1 = gets.chomp
-#     puts
-#     puts "Please input your name PlAYER2?"
-#     # $player2 = gets.chomp
-    
-# end
-
-# #calling method
-# players_name
-
 
     puts "Are you ready to play the guessing game #{$player1} and #{$player2}?"
-    play_game = gets.chomp
+    $play_game = gets.chomp
 
-    if play_game == "yes"
+
+    
+    def want_to_play_game()
+
+        if $play_game == "yes"
     
         puts "Welcome to the guessing game #{$player1} and #{$player2}."
     
-    else 
+        else 
         puts "Better Luck next time #{$player1}"
         
+        end
     end
-
+    want_to_play_game() #calling the method
 
 max_game = 5
 start_game = 0
 score = 0
 
-while start_game < max_game && play_game == "yes"
+while start_game < max_game && $play_game == "yes"
     array_words = []
     
     
@@ -54,7 +45,7 @@ while start_game < max_game && play_game == "yes"
     user_input = STDIN.noecho(&:gets).chomp.upcase
 
 
-# checking if user input is string or not
+# checking if user input is string or not by using regex
     if /^[a-zA-Z]+$/.match(user_input)
         array_words << user_input
     
@@ -114,3 +105,5 @@ while start_game < max_game && play_game == "yes"
 end
 
 puts "#{$player2} your total score is  #{score}"
+
+
