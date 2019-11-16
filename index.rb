@@ -82,13 +82,14 @@ def run_game(first, second)
 
             while user_guess != generate_random_word && !out_of_guesses
                 if guess_limit > guess_count
-        
+                    
                     puts
                     puts "Reminder! you have #{guess_limit} chance to Unscramble this Scrambled word #{second}."
                     puts
+                    guess_limit -= 1
                     print "Please guess the right word #{second_player}: "
                     user_guess = gets.chomp.upcase
-                    guess_limit -= 1
+                    
 
                 else
                     out_of_guesses = true
