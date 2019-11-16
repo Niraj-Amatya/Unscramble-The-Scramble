@@ -4,28 +4,22 @@ require "colorize"
 require "artii"
 cmd_args = ARGV
 
-
-
 app_name = Artii::Base.new 
 puts app_name.asciify("Unscramble The Scramble").colorize(:blue).bold
 
-
-
 # puts "Please enter your name player_1:".colorize(:red)
 player_1 = cmd_args[0]
-
-
 
 # puts "Please enter your name player_2:".colorize(:red)
 player_2 = cmd_args[1]
 # gets.chomp.upcase.colorize(:blue).bold
 ARGV.clear
 
+
 def greeting(person1, person2)
     puts
     puts "Welcome to the guessing game #{person1} and #{person2}"
 end
-
 
 
 def run_game(first, second)
@@ -35,13 +29,16 @@ def run_game(first, second)
     second_player = second
     score = 0
     greeting(first_player, second_player)
+
+    
     while start_round < max_rounds
         
         array_words = []
         puts
         puts "Input the word #{first}"
         user_input = STDIN.noecho(&:gets).chomp.upcase
-
+        
+            puts "Input the correct string"
         if /^[a-zA-Z]+$/.match(user_input)
             array_words << user_input
         
@@ -96,6 +93,7 @@ def run_game(first, second)
             puts "It only takes string"
             puts
             puts "Plese try again"
+        
             
         end
 # 
@@ -105,29 +103,36 @@ def run_game(first, second)
     # puts "#{second} your total score is  #{score}"
 end
 
-score_player2 = run_game(player_1, player_2)
+begin
 
-# puts "You have scored #{score_player2} #{player_2}"
-puts
-puts "Now its your turn to input the word #{player_2} and you are the guesser #{player_1}"
-score_player1 = run_game(player_2, player_1)
+        score_player2 = run_game(player_1, player_2)
 
+        # puts "You have scored #{score_player2} #{player_2}"
+        puts
+        puts "Now its your turn to input the word #{player_2} and you are the guesser #{player_1}"
+        score_player1 = run_game(player_2, player_1)
 
-
-# puts "You have scored #{score_player1} #{player_1}"
-puts "Player 1 score = #{score_player1}"
-puts "Player 2 score = #{score_player2}"
-
-if score_player1 > score_player2
-    puts "#{player_1} is the winner"
-    # puts "Your score is #{score_player1} and #{player_2} score is #{score_player2}"
-
-elsif score_player2 > score_player1
-    puts "#{player_2} is the winner"
-    # puts "Your score is #{score_player2} and #{player_1} score is #{score_player1}"
-     
-
-else
-    puts "You both are the winner"
+rescue
+    puts "Oops Something went wrong."
 
 end
+
+        # puts "You have scored #{score_player1} #{player_1}"
+        puts "Player 1 score = #{score_player1}"
+        puts "Player 2 score = #{score_player2}"
+
+
+
+        if score_player1 > score_player2
+            puts "#{player_1} is the winner"
+            # puts "Your score is #{score_player1} and #{player_2} score is #{score_player2}"
+
+        elsif score_player2 > score_player1
+            puts "#{player_2} is the winner"
+            # puts "Your score is #{score_player2} and #{player_1} score is #{score_player1}"
+            
+
+        else
+            puts "You both are the winner"
+
+        end
