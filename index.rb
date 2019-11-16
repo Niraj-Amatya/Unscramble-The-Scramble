@@ -8,17 +8,21 @@ app_name = Artii::Base.new
 puts app_name.asciify("Unscramble The Scramble").colorize(:blue).bold
 
 # puts "Please enter your name player_1:".colorize(:red)
-player_1 = cmd_args[0]
+player_1 = cmd_args[0].upcase
 
 # puts "Please enter your name player_2:".colorize(:red)
-player_2 = cmd_args[1]
+player_2 = cmd_args[1].upcase
 # gets.chomp.upcase.colorize(:blue).bold
 ARGV.clear
 
 
 def greeting(person1, person2)
-    puts
-    puts "Welcome to the guessing game #{person1} and #{person2}"
+    puts "========================================================================="
+    puts "Welcome to the world of Guessing game #{person1} and #{person2}."
+    puts "A bit of brief about the Game:"
+    puts "There are two players in this game: Player_1 and Player_2."
+    puts "Player_1 is the provider and Player_2 will be the guesser."
+    puts "=========================================================================="
 end
 
 
@@ -35,17 +39,28 @@ def run_game(first, second)
         
         array_words = []
         puts
-        puts "Input the word #{first}"
+        puts "You are the Player_1 #{first_player}."
+        puts "Remember the word can only be strings"
+        puts "Just not to confuse, you can't see anything you are typing in the screen. So hit enter to enter the word."
+        puts
+        print "Please input your word #{first_player}:"
+
+
         user_input = STDIN.noecho(&:gets).chomp.upcase
+
         
-            puts "Input the correct string"
+            # puts "Input the correct string"
         if /^[a-zA-Z]+$/.match(user_input)
             array_words << user_input
         
             generate_random_word = array_words.sample
-
             puts
-            puts "Here is your word to guess #{first}"
+            puts
+            puts
+            puts "You are the Player_2, #{second_player}."
+            puts "Please guess your word wisely."
+            puts
+            puts "Here is your word to Guess #{second_player}"
             puts
     
             #generate new meaningless word
@@ -62,9 +77,9 @@ def run_game(first, second)
                 if guess_limit > guess_count
         
                     puts
-                    puts "you have #{guess_limit} chance to guess the right word #{second}."
+                    puts "Reminder! you have #{guess_limit} chance to Unscramble this Scrambled word #{second}."
                     puts
-                    puts "Please guess the right word #{second}:"
+                    print "Please guess the right word #{second_player}: "
                     user_guess = gets.chomp.upcase
                     guess_limit -= 1
 
@@ -76,7 +91,7 @@ def run_game(first, second)
             end
                     if out_of_guesses == true
                         puts
-                        puts "Wrong guess #{second}"
+                        puts "Oh! you have guessed it wrong #{second}."
                         puts
                         puts "The right word is: #{generate_random_word}"
     
