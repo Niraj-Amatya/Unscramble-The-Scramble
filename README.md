@@ -34,17 +34,21 @@ This game is very simple to use, as small kids are our main target. There are tw
 
  ```
 user_input = STDIN.noecho(&:gets).chomp.upcase
+```
+
  
-
-
-
    ##### Scrambling the word #####
 
-    Another feature I have implemented in my app is to scramble the word into meaningless word. So basically, the word input by the user has to be broken down into characters. The characters then need to be shuffled and then join into the new word. The new word that will be printed will have no meaning. This is where another player will try to guess the right word from this scrambled word.
+Another feature I have implemented in my app is to scramble the word into meaningless word. So basically, the word input by the user has to be broken down into characters. The characters then need to be shuffled and then join into the new word. The new word that will be printed will have no meaning. This is where another player will try to guess the right word from this scrambled word. The code for this is:
 
 ```
 generate_new_meaningless_word = generate_random_word.chars.shuffle.join("               ")
 ```
+
+
+
+
+
 
 
 

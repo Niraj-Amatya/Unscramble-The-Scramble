@@ -23,7 +23,18 @@ def greeting(person1, person2)
     puts "There are two players in this game: Player_1 and Player_2."
     puts "Player_1 is the provider and Player_2 will be the guesser."
     puts "=========================================================================="
+
+    puts
+    puts
+
+
+        puts "You are the Player_1 #{person1}."
+        puts "Remember the word can only be strings"
+        puts "Just not to confuse, you can't see anything you are typing in the screen. So hit enter to enter the word."
+        puts
 end
+
+
 
 
 def run_game(first, second)
@@ -38,10 +49,6 @@ def run_game(first, second)
     while start_round < max_rounds
         
         array_words = []
-        puts
-        puts "You are the Player_1 #{first_player}."
-        puts "Remember the word can only be strings"
-        puts "Just not to confuse, you can't see anything you are typing in the screen. So hit enter to enter the word."
         puts
         print "Please input your word #{first_player}:"
 
