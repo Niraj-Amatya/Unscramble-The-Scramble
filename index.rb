@@ -21,7 +21,9 @@ def greeting(person1, person2)
     puts "Welcome to the world of Guessing game #{person1} and #{person2}."
     puts "A bit of brief about the Game:"
     puts "There are two players in this game: Player_1 and Player_2."
-    puts "Player_1 is the provider and Player_2 will be the guesser."
+    puts "Player_1 is the provider of words and Player_2 will be the guesser."
+    puts "#{person1} you are the provider and #{person2} you are the guesser."
+    puts "Best of Luck!!!!!"
     puts "=========================================================================="
 
     puts
@@ -112,10 +114,12 @@ def run_game(first, second)
                     end
 
             
-        else
-            puts "It only takes string"
+            else puts
             puts
-            puts "Plese try again"
+            puts "Invalid input."
+            puts "Please input only strings"
+            puts
+            
         
             
         end
@@ -136,7 +140,7 @@ begin
         score_player1 = run_game(player_2, player_1)
 
 rescue
-    puts "Oops Something went wrong."
+    puts "We did not anticipate things going worng. We will try to fix this as soon as possible."
 
 end
 
