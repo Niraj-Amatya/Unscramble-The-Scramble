@@ -70,9 +70,43 @@ For each game, only certain number of words should be allowed to play. Once that
 ## **User Interaction and Experience**
 
 ### **How the user will find out how to interact with / use each feature**
-The learner will need to enter their name and will be greeted by the welcome screen. The welcome screen will have a brief about the program.
+1. The user will need to enter their name and will be greeted by the welcome screen with their names. The welcome screen will have a brief about the program. It will also clearly mention which player will be the guessor of the word and who will be the provider of the word.
 
-![screenshot](screenshots/Screenshot1.img)
+    ![Screenshot](/screenshots/Screenshot1.png)
+
+2. Before entering the word, the program will alert user to input only string. Also, it will inform user that words typed in the screen will not be visible.
+
+    ![Screenshot](/screenshots/Screenshot2.png)
+
+3. Every time user will make wrong guess, it will tell how many guesses are left.
+
+    ![Screenshot](/screenshots/Screenshot3.png)
+
+4. Once one of the player plays the game, the program switches the player and detail information about who is the provider and who is the guesser is provided to the users with their names, so that their is no confusion.
+
+    ![ScreenShot](/screenshots/Screenshot4.png)
+
+
+### **How the user will interact with / use each feature**
+
+1. User will have to input their name from the terminal through ARGV command line.
+2. The program only takes string, so the user will be prompted to input only strings.
+3. Another user will be prompted to guess the word.
+4. The user can only guess for pre defined number of time.
+5. After every right guess, the first user will be asked to enter the word again.
+6. So another user will be asked to guess the word again.
+
+### **How errors will be handled by the application and displayed to the user
+
+Every time user will input data types other than strings, an error message is printed in the screen. This is to inform the user what type of data types are accepted. Also, this will handle the error later on in the program. This is how message will be displayed in the screen.
+
+![Screenshot](/screenshots/Screenshot5.png)
+
+For any error within the program that is not expected 'begin' and 'rescue' will be used. So instead of getting error details from the progarm, a firendly message will be displayed to the user. This is the screenshot of the message displayed to the user:
+
+![Screenshot](/screenshots/Screenshot6.png)
+
+
 
 
 
@@ -102,17 +136,4 @@ The learner will need to enter their name and will be greeted by the welcome scr
 
 
 
-   ## **Implementation Plan** ##
-
-   ##### 11 Nov 2019 _(Sunday 8:13pm)_ ##### 
-
-
-The following demonstrated the app project planning status and tasks breakdown at the end of 11 Nov.
-![image](/images.trello-image/20191111.png)
-
- ##### 13 Nov 2019 _(Wednesday 8:13pm)_ ##### 
-The following [Trello Board](./images/20191113.png) demonstrated the app project planning status and tasks breakdown at the end of 13 Nov.
-<img src="./images/20191113.png" alt="Trello Progress picture-2" />
-
-
-![images](./images/Trello1.png)
+   
