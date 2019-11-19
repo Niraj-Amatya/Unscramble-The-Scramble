@@ -1,4 +1,4 @@
-# **Installation Instruction**
+## **Installation Instruction**
 
 #### ***1. Instructions***
 Click the link below and colone Unscramble the Scramble game git repository into your local computer. You can  clone or download it from the Github website by clicking in the top right hand corner. The button colour is green.
@@ -79,6 +79,15 @@ Unscrumble the Scrumble is a word guessing game terminal app, mostly targeting t
     11. Scores will be updated and printed at the end of the game. User will be announced at the end.   
 
     12. Messages will prompt for Players guide.
+
+
+## **Project Management : Trello**
+
+
+##### 11 Nov, 2019 (Saturday, 7:12 pm)
+The following [Trello Board](/images/Trello1.png) demonstrated the app project planning status and tasks breakdown.
+<img src="./images/Trello1.png" alt="Trello Progress picture-1" />
+
 
 
 
