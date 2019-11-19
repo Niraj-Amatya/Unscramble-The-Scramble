@@ -60,16 +60,25 @@ Unscrumble the Scrumble is a word guessing game terminal app, mostly targeting t
 
     2. Users are expected to give their name in the beginning of the game."
 
-    3. For the first part of the game Player_1 will input the word which will      then be scrumbled and printed in the screen. Player_2 will have to guess    the correct word. The input from the Player_1 is masked.
-    4. It is necessary to input only strings otherwise program will not run        further and give error until right data type is not input.
+    3. For the first part of the game Player_1 will input the word which will then be scrumbled and printed    in the screen. Player_2 will have to guess he correct word. The input from the Player_1 is masked.
+
+    4. It is necessary to input only strings otherwise program will not run further and give error      until right data type is not input.
+
     5. Each game will have 5 words to guess.
-    6. The Player will have three chance to guess the right word and for every      right guess, the Player will score 1 point.
-    7. After all three wrong guesses, right answer will be printed. But no         point is scored.
+
+    6. The Player will have three chance to guess the right word and for every right guess, the Player     will score 1 point.
+
+    7. After all three wrong guesses, right answer will be printed. But no point is scored.
+
     8. With the fifth word the first part of the game will end.
+
     9. New game will start without ending the game in terminal. This is just the continuation of the second part of the game.
+
     10. In this part of the game Player_2 will input the word and Player_1 has to guess the word.
+
     11. Scores will be updated and printed at the end of the game. User will be announced at the end.   
-    12. Messages will prompt for Players guide."
+
+    12. Messages will prompt for Players guide.
 
 
 
