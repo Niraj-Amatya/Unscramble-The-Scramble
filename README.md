@@ -1,4 +1,11 @@
 
+## **Description**
+Unscramble The Scramble is the word guessing game. This game is developed generally for kindergarten kids, however; it will suit any age group. This game aims to make learning and retaining the words and vocabulary less stressful and more fun. As this game can be played between the friends by challanging each other, it will make it competitive at the same time.
+
+In this game one player will input the word which will be than scrambled and another player has to unscramble this word. Whoever makes the must guesses wins the game.
+
+
+
 
 ## **Implementation Plan**
 
