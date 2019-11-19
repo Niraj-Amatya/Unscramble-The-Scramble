@@ -81,12 +81,7 @@ Unscrumble the Scrumble is a word guessing game terminal app, mostly targeting t
     12. Messages will prompt for Players guide.
 
 
-## **Project Management : Trello**
 
-
-##### 11 Nov, 2019 (Saturday, 7:12 pm)
-The following [Trello Board](/images/Trello1.png) demonstrated the app project planning status and tasks breakdown.
-<img src="./images/Trello1.png" alt="Trello Progress picture-1" />
 
 
 
