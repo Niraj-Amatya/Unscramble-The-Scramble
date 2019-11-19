@@ -96,7 +96,7 @@ For each game, only certain number of words should be allowed to play. Once that
 5. After every right guess, the first user will be asked to enter the word again.
 6. So another user will be asked to guess the word again.
 
-### **How errors will be handled by the application and displayed to the user
+### **How errors will be handled by the application and displayed to the user**
 
 Every time user will input data types other than strings, an error message is printed in the screen. This is to inform the user what type of data types are accepted. Also, this will handle the error later on in the program. This is how message will be displayed in the screen.
 
@@ -107,6 +107,10 @@ For any error within the program that is not expected 'begin' and 'rescue' will 
 ![Screenshot](/screenshots/Screenshot6.png)
 
 
+## **Control Flow Diagram**
+The control flow diagram is the blueprint for the programming. The diagram was revised through out the project, as the project was developing.
+
+![image](/documentation/control-flow-diagram/control-flow-diagram.jpeg)"Control Flow Diagram"
 
 
 
