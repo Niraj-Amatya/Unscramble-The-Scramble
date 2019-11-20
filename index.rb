@@ -1,25 +1,29 @@
-
+#gem files
 require 'io/console'
 require "colorize"
 require "artii"
+
+#ARGV command line used
 cmd_args = ARGV
 
+#"artii used for the Game name"
 app_name = Artii::Base.new 
 puts app_name.asciify("Unscramble The Scramble").colorize(:blue).bold
 
-# puts "Please enter your name player_1:".colorize(:red)
+#getting name from player 1
 player_1 = cmd_args[0].upcase.colorize(:blue)
 
-# puts "Please enter your name player_2:".colorize(:red)
+#getting name for player 2
 player_2 = cmd_args[1].upcase.colorize(:yellow)
-# gets.chomp.upcase.colorize(:blue).bold
+
 ARGV.clear
 
-
+# method created for the welcome note. Welcome note will have brief note about the game
 def greeting(person1, person2)
     sleep(1)
     127.times{print "="}
     puts
+    #welcome message
     puts "Welcome to the world of Guessing game #{person1} and #{person2}."
     puts "A bit of brief about the Game:"
     puts "There are two players in this game: Player_1 and Player_2."
@@ -31,6 +35,7 @@ def greeting(person1, person2)
     puts
     puts
 
+        #Information for player 1 guide
         sleep(2)
         puts "You are the Player_1 #{person1}."
         puts "Remember the word can only be strings"
@@ -40,34 +45,41 @@ end
 
 
 
-
+#method to call the most part of the game
 def run_game(first, second)
-    start_round = 0
-    max_rounds = 3
+    start_word = 0
+    #maximum words that can be played is 5
+    max_word = 5
     first_player = first
     second_player = second
     score = 0
-    greeting(first_player, second_player)
 
-    
-    while start_round < max_rounds
-        
+    #calling method for the welcome note
+    greeting(first_player, second_player) 
+
+    #this contion will make loop until 5 words are entered to guess
+    while start_word < max_word
+        #empty arry to save word from the player 1 for guessing
         array_words = []
         puts
         sleep(1.5)
         print "Please input your word #{first_player}:"
+        #STDIN.noecho is used to mask the word
         user_input = STDIN.noecho(&:gets).chomp.upcase
 
-        
-            # puts "Input the correct string"
+        #error handling for user input. Regex used to make sure only string is accepted.        
         if /^[a-zA-Z]+$/.match(user_input)
             puts
             puts
+            #if word is string it is pushed to array_words
             array_words << user_input
         
+            #Generate random meaningless word
             generate_random_word = array_words.sample
             sleep(1)
             generate_new_meaningless_word = generate_random_word.chars.shuffle.join(" ")
+
+            #Artii Gem used to display the guessing word so that it is highlighted
             app_name = Artii::Base.new 
             puts "Here is the word to guess:"
             puts
@@ -76,48 +88,42 @@ def run_game(first, second)
             
             puts
             sleep(1)
+            #Information for player 2
             puts "You are Player_2, #{second_player}."
-            # puts "You are the Guesser."
             
-            # sleep(2.5)
-            # puts "Here is your word to Guess #{second_player}"
-            # puts
-            # sleep(1.5)
-            #generate new meaningless word
             
 
             user_guess = " "
             guess_count = 0
+            #maxium guess allowed is 3
             guess_limit = 3
+            #since guessing has not started, it is zero at the beginning
             out_of_guesses = false
-
+            
+            #condition for player 2
             while user_guess != generate_random_word && !out_of_guesses
+                #condition for how many times can player guess
                 if guess_limit > guess_count
                     
-                    # puts
-                    # puts
-                    # sleep(2)
-                    
-                    # puts
-                    
                     sleep(1)
-                    
                     puts
+                    # informs user how many guesses are lef
                     puts "Reminder! you have #{guess_limit} chance to Unscramble this Scrambled word.".colorize(:red)
                     puts "Best of Luck!!!"
                     print "Please guess the right word #{second_player}: "
-                    
-                    
+                    #after every wrong guess max_guess is reduced by 1
                     guess_limit -= 1
+                    #gets  word frm second player
                     user_guess = gets.chomp.upcase
                     
-
+                #after all the wrong guesses are made, player is out of guesses. so it is true
                 else
                     out_of_guesses = true
 
                 end
 
             end
+                    # checking if guessed word is right or wrong
                     if out_of_guesses == true
                         puts
                         puts
@@ -132,29 +138,30 @@ def run_game(first, second)
                         puts
                         sleep(1)
                         puts "Right guess #{second}.Good job!!!".colorize(:green)
-                         score += 1
+                        #every time right guess is made, it is added to score 
+                        score += 1
                     end
 
-            
-                else puts
-                puts
-                puts "Invalid input."
-                puts "Please input only strings."
-                puts
-            
-        
-            
+                #when input by word provider is anything other than string
+        else 
+            puts
+            puts "Invalid input."
+            puts "Please input only strings."
+            puts
+                
         end
-# 
-        start_round += 1
+        #every time new word is provided it will add 1 until max_word is met.
+        start_word += 1
     end
+    #this will update score. its initial value is zero.
     score
-    # puts "#{second} your total score is  #{score}"
+    
 end
 
-
+    #begin/rescue is used to handle the error
 
     begin
+            #calling run_game method with player_1 being the provider of word and player_2 being the guessor
             score_player2 = run_game(player_1, player_2)
             puts
             puts
@@ -162,39 +169,44 @@ end
             puts "Now lets switch the game between the players."
             puts
             puts
+
+            #calling method to switch the game between the players
             score_player1 = run_game(player_2, player_1)
     
 
-    # rescue
-    #     puts "We did not anticipate things going worng. We will try to fix this as soon as possible."
-
-   
+     
             puts
             puts
             sleep(2)
+            #prints the score of both the players
             puts "Your score for this game is" + " #{score_player1},".colorize(:green) + " #{player_1}."
             puts "Your score for this game is" + " #{score_player2},".colorize(:green) + " #{player_2}."
 
+            #compares the score to check for the winner
             if score_player1 > score_player2
                 puts
                 puts
                 sleep(2)
                 puts "Congratulation #{player_1}, you are the winner."
-                # puts "Your score is #{score_player1} and #{player_2} score is #{score_player2}"
-
+                puts
+            
             elsif score_player2 > score_player1
                 puts
                 puts
                 sleep(2)
                 puts "Congratulation #{player_2} you are the winner."
-                # puts "Your score is #{score_player2} and #{player_1} score is #{score_player1}"
+                puts
                 
-
             else
+                puts
+                puts
                 puts "Congratulation, you both are the winner."
+                puts
 
             end
+    
     rescue
+        #this is rescue message when the program can't run
         puts "We did not anticipate things going worng. We will try to fix it as soon as possible."
         puts
         puts
