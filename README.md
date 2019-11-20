@@ -1,8 +1,35 @@
+# **Unscramble The Scramble**
+
+Githhub Repo: https://github.com/Niraj-Amatya/Unscramble-The-Scramble
+
+Contributor: https://github.com/Niraj-Amatya
+
+
 
 ## **Description**
 Unscramble The Scramble is the word guessing game. This game is developed generally for kindergarten kids, however; it will suit any age group. This game aims to make learning and retaining the words and vocabulary less stressful and more fun. As this game can be played between the friends by challanging each other, it will make it competitive at the same time.
 
 In this game one player will input the word which will be than scrambled and another player has to unscramble this word. Whoever makes the must guesses wins the game.
+
+
+## **Documentation for the Project**
+
+1. **[Software Development Plan](https://github.com/Niraj-Amatya/Unscramble-The-Scramble/blob/master/documentation/software-develeopment-plan.md/)**
+
+2. **[Development Log](https://github.com/Niraj-Amatya/Unscramble-The-Scramble/blob/master/development-log.md/)**
+
+
+ 3. **[Control Flow Diagram](https://github.com/Niraj-Amatya/Unscramble-The-Scramble/blob/master/documentation/control-flow-diagram/control-flow-diagram.jpeg/)**
+
+ 4. **[Help File](https://github.com/Niraj-Amatya/Unscramble-The-Scramble/blob/master/help-file.md/)**
+
+ 6. **[TEST APPLICATION](https://github.com/Niraj-Amatya/Unscramble-The-Scramble/blob/master/test-application.md/)**
+
+ 7. **[GEMFILE](https://github.com/Niraj-Amatya/Unscramble-The-Scramble/blob/master/Gemfile/)**
+
+ 8. **[INDEX FILE.rb](https://github.com/Niraj-Amatya/Unscramble-The-Scramble/blob/master/index.rb/)**
+
+
 
 
 
