@@ -4,9 +4,9 @@
 
 
 ### **Describe at a high level what the application will do**
-The application is basically word guessing game for the kids. It allows two users two play together. One is the guesser of the of word and another is the provider of the word. The provider word will be shuffled into meaningless word and the guesser now has to guess the right word.
+The application is basically word guessing game for the kids. It allows two users two play together. One is the guesser of the word and another is the provider of the word. The provider's word will be shuffled into meaningless word and the guesser now has to guess the right word.
 
-The game allows users especially kids entertain and engaged. And at the same time makes learning and remembering the words fun and interesting. Also, this game has competitive factor as well as users will compete against each other and has to score higher to win another player.
+The game allows users especially kids entertain and engaged. And at the same time makes learning and remembering the words fun and interesting. Also, this game has competitive factor as well, as users will compete against each other and has to score higher to win another player.
 
 
 
@@ -14,7 +14,7 @@ The game allows users especially kids entertain and engaged. And at the same tim
 ### **Identify the problem it will solve and explain why you are developing it** 
 Learning vocabulary may not be the most exciting thing kids like to do at school or at home. It is not only challenging for kids to learn and remember words but can be very frustrating for parents and teachers as well.
 
-But by using interesting and fun ways to teach vocabulary words, educators and parent can increase kids interest and help with both memorization and retention.
+ By using interesting and fun ways to teach vocabulary words,educators and parent can increase kids interest and help with both memorization and retention.
 
 This is where my game can be helpful, as learning word can be easy and fun when it’s a game. This game makes learning words easy and challenging at the same time.
 By trying to rearrange the shuffled word in order, kids will develop a better understanding of words and will have in their memory for longer time than the tradition way of memorizing it.
@@ -70,7 +70,7 @@ For each game, only certain number of words should be allowed to play. Once that
 ## **User Interaction and Experience**
 
 ### **How the user will find out how to interact with / use each feature**
-1. The user will need to enter their name and will be greeted by the welcome screen with their names. The welcome screen will have a brief about the program. It will also clearly mention which player will be the guessor of the word and who will be the provider of the word.
+1. The user will need to enter their name and will be greeted by the welcome screen with their names. The welcome screen will have a brief about the program. It will also clearly mention which player will be the guessor of the word and who will be the provider of the word. Different players will have different colour in their name.
 
     ![Screenshot](/screenshots/Screenshot1.png)
 
@@ -92,9 +92,12 @@ For each game, only certain number of words should be allowed to play. Once that
 1. User will have to input their name from the terminal through ARGV command line.
 2. The program only takes string, so the user will be prompted to input only strings.
 3. Another user will be prompted to guess the word.
-4. The user can only guess for pre defined number of time.
-5. After every right guess, the first user will be asked to enter the word again.
-6. So another user will be asked to guess the word again.
+4. The user can only guess for pre defined number of times.
+5. If a wrong guess is made; the user is asked to enter the word again. Right answer is displayed if user can not make the right guess.
+6. After every right guess, the first user will be asked to enter the word again.
+7.  The application will switch the player after the the first part of the game is over.
+8. The whole process will start again.
+9. Score is printed and winner is announced.
 
 ### **How errors will be handled by the application and displayed to the user**
 
