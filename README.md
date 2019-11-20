@@ -36,7 +36,7 @@ In this game one player will input the word which will be than scrambled and ano
 
 ## **Project Management: Trello**
 
-https://trello.com/b/MEU51lRk/unscramble-the-scramble/
+**[Trello Link](https://trello.com/b/MEU51lRk/unscramble-the-scramble/)**
 
 Trello Software is used to track the progress of the application. Any changes with the features, checklists, deadlines and time-frame for each feature are updated in the trello. 
 
@@ -55,4 +55,8 @@ The following [Trello Board](/images/Trello3.png) demonstrated the app project p
 #### 19th Nov, 2019 (Tuesday, 2:02pm)
 The following [Trello Board](/images/Trello4.png) demonstrated the app project planning status and tasks breakdown.
 <img src="./images/Trello4.png" alt="Trello Progress picture-2" />
+
+#### 20th Nov, 2019 (Wednesday, 3:05pm)
+The following [Trello Board](/images/Trello5.png) demonstrated the app project planning status and tasks breakdown.
+<img src="./images/Trello5.png" alt="Trello Final Project picture-2" />
 
