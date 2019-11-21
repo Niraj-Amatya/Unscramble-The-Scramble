@@ -101,17 +101,19 @@ For each game, only certain number of words should be allowed to play. Once that
 
 ### **How errors will be handled by the application and displayed to the user**
 
-The application was running even if the players were not entering their name through ARGV command. So it was an error as there should be player names. So to handle this problem, if/else condition is used. So if the application is run without entering the names of the player, it will ask to input their names again, until it is entered. This is how message will be displayed in the screen:
+#### ***Name input error***
+
+The application was running even if the players were not entering their names through ARGV command. So the program was running but with my game, user input is necessary as they are playing against each other. To solve this porblem a condition with if/else was created, where if the players don't input their name from the ARGV command line, the application will ask to input the name for both the players. This condition is run until the players will input their names. This is how message will be displayed in the screen:
 
 ![Screenshot](/screenshots/Screenshot7.png)
 
 
 
-Every time user will input data types other than strings, an error message is printed in the screen. This is to inform the user what type of data types are accepted. Also, this will handle the error later on in the program. This is how message will be displayed in the screen.
+Every time user will input data types other than strings, an error message is printed in the screen. This is to inform the user what type of data types are accepted. Also, this will handle the error later on in the program. This is how message will be displayed in the screen:
 
 ![Screenshot](/screenshots/Screenshot5.png)
 
-For any error within the program that is not expected 'begin' and 'rescue' will be used. So instead of getting error details from the progarm, a firendly message will be displayed to the user. This is the screenshot of the message displayed to the user:
+For any error within the program that is not expected 'begin' and 'rescue' will be used. So instead of getting error message from the program, a user firendly message will be displayed. This is the screenshot of the message displayed to the user:
 
 ![Screenshot](/screenshots/Screenshot6.png)
 
