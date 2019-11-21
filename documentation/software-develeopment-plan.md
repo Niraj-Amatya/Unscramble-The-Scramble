@@ -108,11 +108,12 @@ The application was running even if the players were not entering their names th
 ![Screenshot](/screenshots/Screenshot7.png)
 
 
-
+#### ***Invalid data types error***
 Every time user will input data types other than strings, an error message is printed in the screen. This is to inform the user what type of data types are accepted. Also, this will handle the error later on in the program. This is how message will be displayed in the screen:
 
 ![Screenshot](/screenshots/Screenshot5.png)
 
+#### ***Unidentified error within the program***
 For any error within the program that is not expected 'begin' and 'rescue' will be used. So instead of getting error message from the program, a user firendly message will be displayed. This is the screenshot of the message displayed to the user:
 
 ![Screenshot](/screenshots/Screenshot6.png)
