@@ -68,7 +68,7 @@ end
 def run_game(first, second)
     start_word = 0
     #maximum words that can be played is 5
-    max_word = 2
+    max_word = 5
     first_player = first
     second_player = second
     score = 0
