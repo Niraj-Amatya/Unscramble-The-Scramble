@@ -10,13 +10,31 @@ cmd_args = ARGV
 app_name = Artii::Base.new 
 puts app_name.asciify("Unscramble The Scramble").colorize(:blue).bold
 
-#getting name from player 1
-player_1 = cmd_args[0].upcase.colorize(:blue)
+#error handling when players don't input their names...
 
-#getting name for player 2
-player_2 = cmd_args[1].upcase.colorize(:yellow)
+#.empty? method is used to see if cmd_args array is empty, as whole thing is saved in cmd_args array..
+if cmd_args.empty?
+    
+    puts "Please enter your name player_1: "
+    player_1 = gets.chomp.upcase
+    puts
+    puts "Please enter your name player_2: "
+    player_2 = gets.chomp.upcase
+
+#if name is saved from argv command this is going to run
+else
+    player_1 = cmd_args[0].upcase
+    player_2 = cmd_args[1].upcase
+end
 
 ARGV.clear
+
+
+#putting value of player_1 to final_player_1, so that player_1 can be used with artii later in line 226 
+final_player_1 = player_1.colorize(:blue)
+
+#putting value of player_2 to final_player_2, so that player_2 can be used with artii later in line 234 
+final_player_2 = player_2.colorize(:green)
 
 # method created for the welcome note. Welcome note will have brief note about the game
 def greeting(person1, person2)
@@ -24,6 +42,7 @@ def greeting(person1, person2)
     127.times{print "="}
     puts
     #welcome message
+    puts
     puts "Welcome to the world of Guessing game #{person1} and #{person2}."
     puts "A bit of brief about the Game:"
     puts "There are two players in this game: Player_1 and Player_2."
@@ -39,7 +58,7 @@ def greeting(person1, person2)
         sleep(2)
         puts "You are the Player_1 #{person1}."
         puts "Remember the word can only be strings"
-        puts "Just not to confuse, you can't see anything you are typing in the screen. So hit enter to enter the word."
+        puts "Just not to confuse, you can't see anything you are typing in the screen. So just hit enter after you type the word."
         puts
 end
 
@@ -49,7 +68,7 @@ end
 def run_game(first, second)
     start_word = 0
     #maximum words that can be played is 5
-    max_word = 5
+    max_word = 2
     first_player = first
     second_player = second
     score = 0
@@ -83,7 +102,7 @@ def run_game(first, second)
             app_name = Artii::Base.new 
             puts "Here is the word to guess:"
             puts
-            puts app_name.asciify(generate_new_meaningless_word).colorize(:green)
+            puts app_name.asciify(generate_new_meaningless_word).colorize(:blue)
             
             
             puts
@@ -131,13 +150,15 @@ def run_game(first, second)
                         puts
                         puts
                         sleep(1)
-                        puts "The right word is:" + "#{generate_random_word}".colorize(:green)
-    
+                        puts "The Right word is:"
+                        app_name = Artii::Base.new 
+                        puts app_name.asciify(generate_random_word).colorize(:green)
+                        
                     elsif out_of_guesses == false
                         puts
                         puts
                         sleep(1)
-                        puts "Right guess #{second}.Good job!!!".colorize(:green)
+                        puts "Right guess #{second}. Good job!!!".colorize(:green)
                         #every time right guess is made, it is added to score 
                         score += 1
                     end
@@ -162,40 +183,50 @@ end
 
     begin
             #calling run_game method with player_1 being the provider of word and player_2 being the guessor
-            score_player2 = run_game(player_1, player_2)
+            score_player2 = run_game(final_player_1, final_player_2)
             puts
             puts
             sleep(2)
             puts "Now lets switch the game between the players."
             puts
             puts
-
             #calling method to switch the game between the players
-            score_player1 = run_game(player_2, player_1)
+            score_player1 = run_game(final_player_2, final_player_1)
     
-
-     
             puts
             puts
             sleep(2)
             #prints the score of both the players
-            puts "Your score for this game is" + " #{score_player1},".colorize(:green) + " #{player_1}."
-            puts "Your score for this game is" + " #{score_player2},".colorize(:green) + " #{player_2}."
+            app_name = Artii::Base.new 
+            puts "#{final_player_1} your score for this game is: "
+            puts app_name.asciify(score_player1).colorize(:green)
+            puts
+            sleep(2) 
+            puts "#{final_player_2} your score for this game is: "
+            #Artii is used
+            puts app_name.asciify(score_player2).colorize(:green) 
+
+            
 
             #compares the score to check for the winner
             if score_player1 > score_player2
                 puts
                 puts
                 sleep(2)
-                puts "Congratulation #{player_1}, you are the winner."
-                puts
+                puts "Congratulation! You are the winner:"
+                sleep(2)
+                #Artii is used
+                app_name = Artii::Base.new 
+                puts app_name.asciify(player_1).colorize(:blue)
             
             elsif score_player2 > score_player1
                 puts
                 puts
                 sleep(2)
-                puts "Congratulation #{player_2} you are the winner."
-                puts
+                puts "Congratulation! You are the winner:"
+                sleep(2)
+                app_name = Artii::Base.new 
+                puts app_name.asciify(player_2).colorize(:green)
                 
             else
                 puts
