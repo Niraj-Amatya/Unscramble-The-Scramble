@@ -68,9 +68,14 @@ The following [Trello Board](/images/Trello3.png) demonstrated the app project p
 
 #### 19th Nov, 2019 (Tuesday, 2:02pm)
 The following [Trello Board](/images/Trello4.png) demonstrated the app project planning status and tasks breakdown.
-<img src="./images/Trello4.png" alt="Trello Progress picture-2" />
+<img src="./images/Trello4.png" alt="Trello Progress picture-4" />
 
 #### 20th Nov, 2019 (Wednesday, 3:05pm)
 The following [Trello Board](/images/Trello5.png) demonstrated the app project planning status and tasks breakdown.
-<img src="./images/Trello5.png" alt="Trello Final Project picture-2" />
+<img src="./images/Trello5.png" alt="Trello Progress Project picture-5" />
+
+#### 21th Nov, 2019 (Thursday, 12:23pm)
+The following [Trello Board](/images/Trello6.png) demonstrated the app project planning status and tasks breakdown.
+<img src="./images/Trello6.png" alt="Trello Final Project picture-5" />
+
 
